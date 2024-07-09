@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highlight Bold Words</title>
+    <script>
+        function highlightWords() {
+            let paragraph = document.getElementById('paragraph');
+            let words = paragraph.innerHTML.split(' ');
+            let highlightedText = '';
+            for (let i = 0; i < words.length; i++) {
+                if (words[i] === 'JavaScript' || words[i] === 'beginner' || words[i] === 'intermediate') {
+                    highlightedText += '<b>' + words[i] + '</b> ';
+                } else {
+                    highlightedText += words[i] + ' ';
+                }
+            }
+            paragraph.innerHTML = highlightedText;
+        }
+    </script>
+</head>
+<body>
+    <p id="paragraph">We have just started this section for the users (beginner to intermediate) who want to work with various JavaScript problems and write scripts online to test their JavaScript skill.</p>
+    <a href="#" onmouseover="highlightWords()">Highlight Words</a>
+</body>
+</html>
